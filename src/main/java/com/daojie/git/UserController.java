@@ -1,5 +1,7 @@
 package com.daojie.git;
 
+import java.util.List;
+
 /**
  * @author dancinghorse
  * @version v0.0.1
@@ -18,6 +20,12 @@ public class UserController {
 	}
 	public void logout(){
 		System.out.println("session清除，登出成功");
+	}
+	public void fingAll(){
+		List<User> all = userService.findAll();
+		for (User user : all) {
+			System.out.println(user.getName());
+		}
 	}
 
 	public static void main(String[] args) {

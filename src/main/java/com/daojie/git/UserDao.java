@@ -1,5 +1,8 @@
 package com.daojie.git;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * @author dancinghorse
  * @version v0.0.1
@@ -12,5 +15,13 @@ public class UserDao {
 		}else {
 			return null;
 		}
+	}
+	List<User> selectAll(){
+		List<User> list = new ArrayList<>();
+		list.add(new User("Tom","123456"));
+		list.add(new User("Jerry","123456"));
+		list.add(new User("Tony","123456"));
+		list.add(new User("Peter","123456"));
+		return list;
 	}
 }
