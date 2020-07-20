@@ -16,6 +16,9 @@ public class UserController {
 			System.out.println("登录失败！");
 		}
 	}
+	public void logout(){
+		System.out.println("session清除，登出成功");
+	}
 
 	public static void main(String[] args) {
 		UserController userController = new UserController();
