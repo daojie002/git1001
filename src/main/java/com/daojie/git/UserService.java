@@ -6,4 +6,15 @@ package com.daojie.git;
  * @date 2020/7/20 - 上午11:41
  */
 public class UserService {
+	private UserDao userDao = new UserDao();
+	public boolean login(User user){
+		boolean ret = false;
+		User refUser = userDao.selectByName(user.getName());
+		if (refUser != null) {
+			if (refUser.getPsd().equals(user.getPsd())) {
+				ret = true;
+			}
+		}
+		return ret;
+	}
 }
