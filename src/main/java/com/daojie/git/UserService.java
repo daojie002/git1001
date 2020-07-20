@@ -1,5 +1,7 @@
 package com.daojie.git;
 
+import java.util.List;
+
 /**
  * @author dancinghorse
  * @version v0.0.1
@@ -16,5 +18,8 @@ public class UserService {
 			}
 		}
 		return ret;
+	}
+	public List<User> findAll(){
+		return  userDao.selectAll();
 	}
 }

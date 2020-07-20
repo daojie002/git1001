@@ -1,5 +1,7 @@
 package com.daojie.git;
 
+import java.util.List;
+
 /**
  * @author dancinghorse
  * @version v0.0.1
@@ -16,10 +18,16 @@ public class UserController {
 			System.out.println("登录失败！");
 		}
 	}
+	public void fingAll(){
+		List<User> all = userService.findAll();
+		for (User user : all) {
+			System.out.println(user.getName());
+		}
+	}
 
 	public static void main(String[] args) {
 		UserController userController = new UserController();
-		userController.login(new User("T1om","1234516"));
+		userController.fingAll();
 	}
 
 }
